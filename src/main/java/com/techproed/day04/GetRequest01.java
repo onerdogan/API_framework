@@ -24,7 +24,7 @@ public class GetRequest01 {
 
         //3- Request gonderiyoruz
         Response response=given().
-                accept(ContentType.JSON).
+                accept("application/json").
                 when().
                 get(url);
         response.prettyPrint();
@@ -49,7 +49,7 @@ public class GetRequest01 {
         response.then().
                 assertThat().
                 statusCode(200).
-                contentType("application/json").
+                contentType(ContentType.JSON).
                 statusLine("HTTP/1.1 200 OK");
 
 
