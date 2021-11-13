@@ -46,7 +46,7 @@ ve content type'inin "application/json"
                 assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON).
-                body("firstname",equalTo("Susan"),
+                body("firstname", equalTo("Susan"),
                         "lastname", equalTo("Wilson"),
                         "totalprice", equalTo(903),
                         "bookingdates.checkin",equalTo("2021-01-30"),

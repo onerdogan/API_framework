@@ -7,12 +7,13 @@ import org.junit.runner.Request;
 
 public class JsonPlaceHolderTestBase {
 
-    protected RequestSpecification spec01;
 
+
+    protected RequestSpecification spec01;
     @Before
     public void setUp(){
-        spec01=new RequestSpecBuilder().
-                setBaseUri("https://jsonplaceholder.typicode.com/").
+        spec01= new RequestSpecBuilder().
+                setBaseUri("https://jsonplaceholder.typicode.com").
                 build();
     }
 }

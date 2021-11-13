@@ -26,7 +26,7 @@ public class GetRequest05 {
                 get(url);
         response.prettyPrint();
         response.then().assertThat().statusCode(200).contentType("application/json").
-                body("data.profile_image", hasSize(24),
+                body("data.id", hasSize(24),
                         "data.employee_name",hasItem("Ashton Cox"),
                         "data.employee_age" ,hasItems(21,61,23));
     }
