@@ -44,4 +44,21 @@ public class DummyTestData {
         expectedData.put("calisan11",calisan11Map);
         return expectedData;
     }
+
+   // Status kodun 200 olduğunu,
+//    En yüksek maaşın 725000 olduğunu,
+//    En küçük yaşın 19 olduğunu,
+//    İkinci en yüksek maaşın 675000
+//    olduğunu test edin.
+   public HashMap<String, Integer> setupTestData1() {
+
+       HashMap<String,Integer> expectedData=new HashMap<String,Integer>();
+       expectedData.put("statuscode",200);
+       expectedData.put("enyuksekmaas",725000);
+       expectedData.put("enkucukyas",19);
+       expectedData.put("ikinciyuksekmaas",675000);
+       return expectedData;
+
+   }
+
 }
