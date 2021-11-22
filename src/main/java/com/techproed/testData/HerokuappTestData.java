@@ -1,5 +1,8 @@
 package com.techproed.testData;
 
+import com.google.gson.JsonObject;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 
 public class HerokuappTestData {
@@ -29,5 +32,19 @@ public class HerokuappTestData {
         expectedData.put("depositpaid",false);
         expectedData.put("bookingdates",bookingdates);
         return expectedData;
+    }
+    public JSONObject setUpTestAndReguestData(){
+        JSONObject bookingdates=new JSONObject();
+        bookingdates.put("checkin","2020-11-17");
+        bookingdates.put("checkout","2021-11-17");
+
+        JSONObject expectedReguest=new JSONObject();
+        expectedReguest.put("firstname","ozgur");
+        expectedReguest.put("lastname","kus");
+        expectedReguest.put("totalprice",123);
+        expectedReguest.put("depositpaid",false);
+        expectedReguest.put("bookingdates",bookingdates);
+        return expectedReguest;
+
     }
 }
