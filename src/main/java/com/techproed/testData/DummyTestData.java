@@ -60,7 +60,7 @@ public class DummyTestData {
        return expectedData;
 
    }
-   public HashMap<String,String> setapRequestBody(){
+   public HashMap<String,String> setUpRequestBody(){
         HashMap<String,String> reguestBody=new HashMap<String,String>();
         reguestBody.put("name","ozgurkus");
         reguestBody.put("salary","333");
@@ -70,7 +70,7 @@ public class DummyTestData {
    }
 
    public HashMap<String, Object> setupExpectedData(){
-//        HashMap<String,Object> data=new HashMap<String,Object>();
+//        HashMap<String,Object> icdata=new HashMap<String,Object>();
 //        data.put("name","ozgurkus");
 //        data.put("salary","333");
 //        data.put("age","45");
@@ -78,7 +78,7 @@ public class DummyTestData {
        HashMap<String,Object> expectedData=new HashMap<String,Object>();
        expectedData.put("statusCode",200);
        expectedData.put("status","success");
-//       expectedData.put("data",data);
+//       expectedData.put("data",icdata);
        expectedData.put("message","Successfully! Record has been added.");
        return expectedData;
 

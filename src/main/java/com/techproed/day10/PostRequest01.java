@@ -33,12 +33,13 @@ public class PostRequest01 extends DummyTestBase {
     @Test
     public void test() {
 
-        spec03.pathParams("parametre1","create");
+        spec03.pathParam("parametre1","create");
 
         DummyTestData obje = new DummyTestData();
 
-
-        HashMap<String, String> requestBodyMap = obje.setapRequestBody();
+//post request yaparken bady gondermek zorundayiz, testdata clasinda olusturdugumuz
+        //request bodyyi burada cagiriyoruz
+        HashMap<String, String> requestBodyMap = obje.setUpRequestBody();
         HashMap<String,Object> expectedDataMap=obje.setupExpectedData();
 
 
