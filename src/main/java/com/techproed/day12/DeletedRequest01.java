@@ -5,7 +5,10 @@ import com.techproed.testData.DummyTestData;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -42,5 +45,12 @@ public class DeletedRequest01 extends DummyTestBase {
                 body("status", equalTo(expecteddata.getString("status")),
                         "data",equalTo(expecteddata.getString("data")),
                         "message",equalTo(expecteddata.getString("message")));
+
+        //de serialization
+        HashMap<String,Object> actualData=response.as(HashMap.class);
+        Assert.assertEquals(200,response.getStatusCode());
+        Assert.assertEquals(expecteddata.getString("status"),actualData.get("status"));
+        Assert.assertEquals(expecteddata.getString("data"),actualData.get("data"));
+        Assert.assertEquals(expecteddata.getString("message"),actualData.get("message"));
     }
 }

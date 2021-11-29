@@ -17,6 +17,7 @@ public class BookingResponsePojo {
 
     private  int bookingid;
     private BookingPojo booking;
+
     //getter setter
 
     public int getBookingid() {

@@ -40,6 +40,7 @@ public class TodosPojo {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
+
 //3- parametreli ve parametresiz constructor olusturduk
     public TodosPojo() {
     }

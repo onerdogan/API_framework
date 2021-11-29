@@ -51,10 +51,11 @@ public class PatchRequest01 extends JsonPlaceHolderTestBase {
     response.prettyPrint();
 
     //Matchers class
-    response.then().assertThat().
+    response.then().assertThat().statusCode(200).
             body("completed", equalTo(expectedData.getBoolean("completed")),
                     "title",equalTo(expectedData.getString("title")),
-                    "userId",equalTo(expectedData.getInt("userId")));
+                    "userId",equalTo(expectedData.getInt("userId")),
+                    "id",equalTo(expectedData.getInt("id")));
 
     //de serialization
     HashMap<String,Object> actualData=response.as(HashMap.class);
